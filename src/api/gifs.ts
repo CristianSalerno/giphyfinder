@@ -1,4 +1,4 @@
-export interface Gifs {
+export interface IGifs {
     id:string,
     url:string
 }

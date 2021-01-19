@@ -1,28 +1,45 @@
 import React from 'react';
 import {useState, useEffect} from 'react'
-import {Gifs} from './api/gifs'
+import {IGifs} from './api/gifs'
 
 
+const App:React.FC = () => {
 
+  const [gif , setGif] = useState<IGifs[]>([]);
 
-const App:React.FC<any> =()=> {
-
-  const [gif , setGif] = useState<Gifs>();
-
-  const searchGif = async () =>{
-    let response = await  fetch('https://api.giphy.com/v1/gifs/search?api_key=1onyPAIshszx9FwpflWDVS7mdWSVMCUi&q=parasite&limit=25&offset=0&rating=g&lang=en')
-    let gif = await response.json();
-    setGif(gif.data[0])
+  const getTrendingGifs = async () =>{
+    let response = await fetch('https://api.giphy.com/v1/gifs/trending?api_key=1onyPAIshszx9FwpflWDVS7mdWSVMCUi&limit=25&rating=g')
+    let allTrendingGifs = await response.json();
+    
+    setGif(allTrendingGifs.data.map((gif:any)=>({
+      id: gif.id,
+      url:gif.images.original.url,
+    })))
   }
 
   useEffect(() => {
-    searchGif();
-  }, [])
+    if(gif.length === 0){
+      getTrendingGifs();
+    }else{
+      return undefined;
+    }
+  })
+
+  const renderGifs = () =>{
+    return gif.map(el =>{
+      return (
+        <div>
+          <h2>hola</h2>
+          <img src={el.url} alt=""/>
+        </div>
+      )
+    })
+  }
 
   return (
     <div className="App">
       <header className="App-header">
-        {gif?.id}
+      {renderGifs()}
       </header>
     </div>
   );

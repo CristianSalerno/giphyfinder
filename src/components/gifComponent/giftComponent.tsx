@@ -25,9 +25,6 @@ const GiftComponent:React.FC = () => {
         setSearchInput(term)
       }
 
-      const getSearchedGif = (term:string) =>{
-        return api.search(term)
-      }
 
       useEffect(() => {
         if(arrayGifs.length === 0){

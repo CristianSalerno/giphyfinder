@@ -25,8 +25,6 @@ const SearchComponent:React.FC<Props> = (props:Props) => {
         
     }
 
-
-    
     return(
         <div className="search-container">
 

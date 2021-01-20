@@ -1,3 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
 .container {
   display: flex;
   flex-direction: row;
@@ -8,5 +17,35 @@
 
 .container img {
   padding: 10px;
+  cursor: pointer;
+}
+
+.dark-theme--mode {
+  transition: all 0.5s;
+  background-color: black;
+  color: #fff;
+}
+
+.light-theme--mode {
+  transition: all 0.5s;
+  background-color: #fff;
+  color: black;
+}
+
+.theme-button-dark {
+  background-image: url("https://img.icons8.com/dusk/64/000000/new-moon.png");
+  background-repeat: no-repeat;
+  transition: all 0.5s;
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+}
+
+.theme-button-light {
+  background-image: url("https://img.icons8.com/dusk/64/000000/summer.png");
+  background-repeat: no-repeat;
+  transition: all 0.5s;
+  width: 64px;
+  height: 64px;
   cursor: pointer;
 }

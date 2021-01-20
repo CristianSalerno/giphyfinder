@@ -14,6 +14,8 @@ search: (query: string): Promise<IGifs[]> => {
       );
   },
 
+  
+
 }
 
 export default api;

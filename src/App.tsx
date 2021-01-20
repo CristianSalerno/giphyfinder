@@ -1,14 +1,13 @@
 import React from 'react';
-import GiftService from './api/giftservice'
-import SearchComponent from './components/searchComponent';
+import GiftComponent from './components/gifComponent/giftComponent'
+
 
 
 const App:React.FC = () => {
 
   return (
-    <div > 
-      <SearchComponent/>  
-      <GiftService/>
+    <div >  
+      <GiftComponent/>
     </div>
   );
 

@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import GiftComponent from './components/gifComponent/giftComponent'
 
-
-
 const App:React.FC = () => {
-
 
   const [theme , setTheme] = useState('');
   const [buttonTheme, setButtonTheme] = useState({
@@ -21,8 +18,6 @@ const App:React.FC = () => {
       setButtonTheme({value: 'theme-button-dark'})
     }
   }
-
-
 
   return (
     <div className={theme}>  

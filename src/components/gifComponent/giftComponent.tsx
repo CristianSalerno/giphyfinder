@@ -2,7 +2,6 @@ import React from 'react';
 import {useState, useEffect} from 'react';
 import {IGifs} from '../../api/gifs';
 import '../../styles/app.css'
-import api from '../../api/'
 import SearchComponent from '../searchComponent/searchComponent';
 
 const GiftComponent:React.FC = () => {

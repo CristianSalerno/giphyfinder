@@ -14,7 +14,18 @@ search: (query: string): Promise<IGifs[]> => {
       );
   },
 
-  
+  getTrendingGifs:() =>{
+    return fetch('https://api.giphy.com/v1/gifs/trending?api_key=1onyPAIshszx9FwpflWDVS7mdWSVMCUi&limit=25&rating=g')
+    .then((res)=> res.json())
+    .then((response:any)=>{
+      response.data.map((treningGifs:IGifRawSearch)=>({
+        id: treningGifs.id,
+        images: treningGifs.images.original.url,
+        title: treningGifs.title
+      }))
+    })
+
+    }
 
 }
 

@@ -1,14 +1,14 @@
 import React from 'react';
 import {useState, useEffect} from 'react';
-
+import './search.css'
 const SearchComponent:React.FC = () => {
 
     const [foundedGif, getOneGif] = useState([]);
     
+    
     return(
-        <div>
-            <input type="search"/>
-            <label htmlFor="">find one</label>
+        <div className="search-container">
+            <input type="search" placeholder=""/>
         </div>
     )
 };

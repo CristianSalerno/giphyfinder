@@ -1,0 +1,12 @@
+.search-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.search-container input {
+  padding: 20px;
+  text-align: center;
+  font-family: "Segoe UI", Roboto;
+  font-size: 1.5em;
+  border: 3px solid rgb(206, 206, 206);
+}

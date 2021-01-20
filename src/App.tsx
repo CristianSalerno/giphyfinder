@@ -1,11 +1,11 @@
 import React from 'react';
-import {useState, useEffect} from 'react'
-import {IGifs} from './api/gifs'
-
+import {useState, useEffect} from 'react';
+import {IGifs} from './api/gifs';
+import './styles/app.css'
 
 const App:React.FC = () => {
 
-  const [gif , setGif] = useState<IGifs[]>([]);
+  const [arrayGifs , setGif] = useState<IGifs[]>([]);
 
   const getTrendingGifs = async () =>{
     let response = await fetch('https://api.giphy.com/v1/gifs/trending?api_key=1onyPAIshszx9FwpflWDVS7mdWSVMCUi&limit=25&rating=g')
@@ -18,7 +18,7 @@ const App:React.FC = () => {
   }
 
   useEffect(() => {
-    if(gif.length === 0){
+    if(arrayGifs.length === 0){
       getTrendingGifs();
     }else{
       return undefined;
@@ -26,21 +26,20 @@ const App:React.FC = () => {
   })
 
   const renderGifs = () =>{
-    return gif.map(el =>{
+    return arrayGifs.map(el =>{
       return (
         <div>
-          <h2>hola</h2>
           <img src={el.url} alt=""/>
         </div>
       )
     })
   }
 
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="container">   
       {renderGifs()}
-      </header>
     </div>
   );
 

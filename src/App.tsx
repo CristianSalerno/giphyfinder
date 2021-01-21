@@ -20,9 +20,17 @@ const App:React.FC = () => {
   }
 
   return (
-    <div className={theme}>  
-      <div onClick={selectColorMode} className={buttonTheme.value}/>
+    <div className={theme}>
+      <div className="theme-selector--container">
+        <div id="theme-selector" onClick={selectColorMode} className={buttonTheme.value}/>
+      </div>    
+      <div className="title">
+        <h2>Find your gif</h2>
+      </div>
       <GiftComponent/>
+      <footer>
+        <h5> Developed by <a href="https://github.com/CristianSalerno/giphyfinder" target="_blank">Cristian Salerno</a> </h5>
+      </footer>
     </div>
   );
 

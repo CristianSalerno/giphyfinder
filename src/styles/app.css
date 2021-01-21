@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Potta+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +8,7 @@
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  font-family: "Potta One", cursive;
 }
 
 .container {
@@ -20,9 +24,27 @@
   cursor: pointer;
 }
 
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.title h2 {
+  font-size: 2em;
+  font-weight: 400;
+}
+
+.theme-selector--container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
 .dark-theme--mode {
   transition: all 0.5s;
-  background-color: black;
+  background-color: #0d1117;
   color: #fff;
 }
 
@@ -50,6 +72,19 @@
   cursor: pointer;
 }
 
+footer {
+  color: #fff;
+  background-color: black;
+  text-align: center;
+  padding: 10px;
+}
+
+footer h5,
+a {
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
 @media only screen and (max-width: 600px) {
   .container {
     display: flex;
@@ -62,5 +97,11 @@
   .container img {
     max-width: 150px;
     max-height: 150px;
+  }
+
+  .theme-selector--container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
   }
 }

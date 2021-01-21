@@ -49,3 +49,18 @@
   height: 64px;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: columns;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .container img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+}
